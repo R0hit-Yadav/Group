@@ -169,6 +169,8 @@ section
 {
     padding: 100px 12%;
 }
+
+
 /*Home Section*/
 .home-img img.hero
 {
@@ -233,6 +235,8 @@ img.moon-light
     mix-blend-mode: screen;
     width: 90px;
 }
+
+
 
 /* Flight List */
 
@@ -299,7 +303,6 @@ img.moon-light
     color: #000;
     font-size:.8rem;
     font-weight: 600;
-
 }
 
 
@@ -378,6 +381,37 @@ img.moon-light
 
 }
 
+
+/* shop  */
+.shop .flight-box
+{
+    text-align: left;
+    width: 210px;
+
+}
+
+.shop .flight-box img
+{
+    animation: none;
+    border-radius: 200px;
+    box-shadow: var(--neon-box-shadow);
+}
+
+.shop .flight-box .title
+{
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+.shop .flight-box .price
+{
+    color: var(--hover-color);
+    
+
+
+}
 
 
 
