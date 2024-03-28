@@ -399,7 +399,7 @@ img.moon-light
 
 .shop .flight-box .title
 {
-    font-size: 22px;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 1px;
     margin: 5px 0;
@@ -408,9 +408,117 @@ img.moon-light
 .shop .flight-box .price
 {
     color: var(--hover-color);
-    
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.shop-btn
+{
+    text-align: center;
+}
+
+.shop-btn .marsBtn
+{
+    height: 40px;
+    line-height: 40px;
+
+}
 
 
+/* experince */
+.experience .img-mission img
+{
+    width: 300px;
+}
+
+.experience .circle-animate
+{
+    position: relative;
+    left: 27%;
+    width: 150px;
+    height: 150px;
+}
+
+
+/* footer  */
+footer
+{
+    width: 100%;
+    height: auto;
+    background: rgba(0,0,0,0.7);
+    padding: 3rem 12%;
+    color: #fff;
+    border-top: 1px solid #561389;
+
+}
+
+.container-foot
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.container-foot .leftBox .social-media
+{
+    display: flex;
+}
+
+.container-foot .title
+{
+    font-size: 1.5rem;
+    color: var(--hover-color);
+    font-weight: 600;
+
+}
+
+.leftBox p
+{
+    padding: 15px 0;
+    line-height: 1.5rem;
+}
+
+.social-media a
+{
+    font-size: 1.5rem;
+}
+
+.social-media a:hover
+{
+    color: var(--hover-color);
+}
+
+.social-media li
+{
+    margin-right: 1rem;
+}
+
+.quick-menu li
+{
+    margin-top: 1rem;
+}
+
+.quick-menu li a:hover
+{
+    color: var(--hover-color);
+
+}
+
+.info li span
+{
+    display: flex;
+    margin: 1rem 1rem 1rem 0;
+    column-gap: 5px;
+    align-items: center;
+}
+
+.header.sticky
+{
+    background: rgba(0,0,0,0.7);
+    padding: 10px 12%;
+    border-bottom: 1px solid #3e0e62;
 }
 
 
