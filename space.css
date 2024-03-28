@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@666&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+:root
+{
+    --color-text:#cdc6c3;
+    --hover-color:#70efbf;
+    --neon-box-shadow:0 0 .5rem #70efbf;
+    --index: calc(1vw + 1vh);
+
+}
+
+::-webkit-scrollbar
+{
+    height: 0;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track
+{
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--hover-color);
+    border-radius: 5rem;
+}
+
+body{
+    font-family: "Outfit",sans-serif;
+    background-image: url(/Space_Images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+    
+}
+
+a{
+    color: white;
+}
+
+header
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo
+{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--hover-color);
+}
+
+.logo img
+{
+    max-width: 100%;
+    width: 40px;
+    height:auto;
+
+}
+
+header .navlist
+{
+    display: flex;
+}
+
+.navlist li
+{
+    margin:0 1.5rem;
+}
+
+.navlist li .nav-item
+{
+    position: relative;
+    padding: 17px 0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all .2s ease;
+}
+
+
+.navlist li .nav-item:hover
+{
+    color: var(--hover-color);
+}
+.navlist li .nav-item::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 1px;
+    background: var(--hover-color);
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+.navlist li .nav-item:hover::before
+{
+    width: 100%;
+
+}
+
+.navlist li .active
+{
+    color: var(--hover-color);
+    border-bottom: 1px solid --hover-color;
+}
+
+.right-side
+{
+    display: flex;
+    align-items: center;
+}
+
+.marsBtn
+{
+    background: linear-gradient(180deg ,#70efbf 0,#21e69a 100%);
+    height: 28px;
+    line-height: 30px;
+    border-radius: 5px;
+    padding: 0 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all .3s ease;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 6px;
+}
+
+.marsBtn:hover
+{
+    background: linear-gradient(180deg ,#70efbf 0,#21e69a 100%);
+    box-shadow: 0 3px 9px #25b981;
+
+}
+
+#menu-icon
+{
+    color: var(--hover-color);
+    font-size: 2.5rem;
+    display: none;
+
+}
+
+section
+{
+    padding: 100px 12%;
+}
+/*Home Section*/
+.home-img img.hero
+{
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    animation:  floatImg 2s ease-in-out infinite;
+}
+
+.earth-rotate img.earth
+{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: calc(var(--index)*45);
+    animation: rotate 365s infinite linear;
+}
+
+.home
+{
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+    color: #fff;
+    width: 100%;
+}
+
+.home-text h1,h2
+{
+    font-size: calc(var(--index)*2);
+    margin-bottom: 1rem;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px #474747;
+}
+
+.home-text .marsBtn
+{
+    margin-top: 1rem;
+    height: 35px;
+    line-height: 35px;
+
+}
+
+span
+{
+    color: var(--hover-color);
+}
+
+.home-img
+{
+    position: relative;
+}
+
+img.moon-light
+{
+    position: relative;
+    left: 0;
+    mix-blend-mode: screen;
+    width: 90px;
+}
+
+/* Flight List */
+
+.flight-list
+{
+    position: relative;
+}
+
+.flight-list .container
+{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.container .flight-box
+{
+    width: 200px;
+    padding: 2rem 1.5rem 2rem;
+    text-align: center;
+    background-image: url(Space_Images/cardBg.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    color: #fff;
+    z-index: 2;
+    margin: 2rem .5rem;
+}
+
+.flight-box img
+{
+    width: 120px;
+    margin: -4rem auto auto;
+    animation:  floatImg 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 .5rem #1787ff);
+    border-radius: 50;
+
+}
+
+.container .flight-box h2
+{
+    color: var(--hover-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.flight-box p
+{
+    color: #dddcdc;
+    line-height: 1.5rem;
+    font-size: .9rem;
+
+}
+
+.flight-box .marsBtn
+{
+    margin-top: 1rem;
+    height: 32px;
+    line-height: 32px;
+    color: #000;
+    font-size:.8rem;
+    font-weight: 600;
+
+}
+
+
+
+/* mission */
+.mission-history
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.img-mission
+{
+    position: relative;
+    width: 600px;
+}
+
+.circle-animate
+{
+    position: absolute;
+    top: 30%;
+    width: 200px;
+    height: 200px;
+    background: var(--hover-color);
+    border-radius: 50%;
+    box-shadow: var(--neon-box-shadow);
+    text-align: right;
+}
+
+.circle-animate span
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+    opacity: .4;
+    animation: circleAnimate 4s ease-out infinite;
+    animation-delay:calc(1s *var(--index)) ;
+}
+
+.img-mission img
+{
+    width: 200px;
+    height: auto;
+    animation: floatImg 4s ease-in-out infinite;;
+}
+
+.text-mission
+{
+    color: #fff;
+}
+
+.text-mission h3
+{
+    font-size: 2.5rem;
+    text-shadow: 2px 1px 1px #474747;
+}
+
+.text-mission p
+{
+    margin: 1rem auto;
+    line-height: 2rem;
+    /* text-shadow: 2px 1px 1px #474747 ; */
+}
+
+.text-mission .mission-btn a
+{
+    margin-top: 1rem;
+    height: 35px;
+    line-height: 35px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes rotate
+{
+    from
+    {
+        transition: rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes floatImg
+{
+    0%
+    {
+        transform: translateY(0);
+    }
+    50%
+    {
+        transform: translateY(-14px);
+    }
+    100%
+    {
+        transform: translateY(0);
+    }
+}
+
+@keyframes circleAnimate
+{
+    100%
+    {
+        opacity: 0;
+        transform: scale(2);
+    }
+
+}
