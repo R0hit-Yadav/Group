@@ -303,6 +303,8 @@ img.moon-light
     color: #000;
     font-size:.8rem;
     font-weight: 600;
+    width: 100%;
+    text-align: center;
 }
 
 
@@ -514,11 +516,51 @@ footer
     align-items: center;
 }
 
-.header.sticky
+header.sticky
 {
     background: rgba(0,0,0,0.7);
-    padding: 10px 12%;
+    padding: 7px 12%;
     border-bottom: 1px solid #3e0e62;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+
+
+
+/* scroll animation right-left animation */
+.scroll-left
+{
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+.scroll-right
+{
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+.scroll-top
+{
+    opacity: 0;
+    transform: translateY(-50px);
+
+}
+
+.scroll-bottom
+{
+    opacity: 0;
+    transform: translateY(50px);
+
+}
+
+.show-items
+{
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(0);
+    transition: all 2s;
 }
 
 
@@ -527,38 +569,7 @@ footer
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*for animation keyframs*/
 
 @keyframes rotate
 {
@@ -595,6 +606,123 @@ footer
     {
         opacity: 0;
         transform: scale(2);
+    }
+
+}
+
+
+
+/*for responsive media query*/
+@media(max-width:1200px)
+{
+    .navlist li
+    {
+        margin: 0 1.2rem;
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:991px)
+{
+    header,header.sticky{
+        padding: 12px 3%;
+
+    }
+
+    .navlist li .nav-item
+    {
+        padding: 23px 0;
+    }
+
+    .flight-list .container
+    {
+        margin-top: 0;
+
+    }
+
+    section
+    {
+        padding: 50px 3%;
+    }
+
+    .container-foot
+    {
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 2rem;
+    }
+
+    .mission-history,
+    .experience
+    {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .img-mission
+    {
+        width: auto;
+    }
+
+}
+
+@media(max-width:768px)
+{
+    #menu-icon
+    {
+        display: block;
+        margin-left: .7rem;
+    }
+
+    .navlist
+    {
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        flex-direction: column;
+        background: rgba(0,0,0,0.7);
+        height: 100vh;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        transition: all .7s ease;
+    }
+
+    .open
+    {
+        top: 100%;
+
+    }
+
+    .navlist li
+    {
+        padding: 1.2rem;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .navlist li .nav-item
+    {
+        padding: 5px 0;
+        font-size: 1.4rem;
+
+    }
+
+    .home
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .earth-rotate img.earth 
+    {
+        animation: none;
+    }
+
+    .container-foot
+    {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
 }
