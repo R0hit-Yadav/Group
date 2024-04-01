@@ -24,7 +24,6 @@ window.addEventListener("scroll",activeMenu)
 
 
 // active menu icon
-
 const menuIcon=document.querySelector("#menu-icon");
 const navlist=document.querySelector(".navlist");
 
@@ -43,7 +42,6 @@ window.onscroll = () =>
 }
 
 // scroll animation
-
 const observer=new IntersectionObserver((entries)=>
 {
     entries.forEach((entry)=>{
